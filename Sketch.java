@@ -66,6 +66,17 @@ public class Sketch extends PApplet {
 
   }
     
+    /*
+     * Draws the Cube Faces
+     * 
+     * @param cubeX    X coordinate of square
+     * @param cubeY    Y coordinate of square
+     * @param cubeWidth    Width of square
+     * @param cubeHeight   Height of square
+     * @cubeColour1, cubeColour2, cubeColour3    RGB colour of square
+     * @eyesColour1, eyesColour2, eyesColour3    RGB colour of eyes and mouth
+     */
+
     public void drawCube(float cubeX, float cubeY, float cubeWidth, float cubeHeight, int cubeColour1, int cubeColour2, int cubeColour3, int eyesColour1, int eyesColour2, int eyesColour3) {
       // fill colour of body
       fill(cubeColour1, cubeColour2, cubeColour3);
