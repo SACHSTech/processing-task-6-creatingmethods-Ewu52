@@ -41,6 +41,32 @@ public class Sketch extends PApplet {
     drawCube(600, 65, 100, 100, 157, 246, 49, 8, 147, 190);
     drawCube(650, 75, 100, 100, 237, 208, 199, 239, 71, 0);
     drawCube(700, 75, 100, 100, 255, 196, 0, 10, 250, 230);
+    
+    float newX = drawCircle(25,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+    newX = drawCircle(newX,25,50);
+
   }
 
   /**
@@ -51,16 +77,16 @@ public class Sketch extends PApplet {
    * @param flowerDiameter  Diameter of the petals
    */
   public void drawFlower(float flowerX1, float flowerY1, float flowerDiameter) {
-    // Declare the variables of Flower1
+    // Declare the variables of Flower
 
-    // Draw flower petals of Flower1
+    // Draw flower petals of Flower
     fill(250, 238, 2);
     ellipse(flowerX1 - 30, flowerY1 - 30, flowerDiameter - 10, flowerDiameter - 10);
     ellipse(flowerX1 + 30, flowerY1 - 30, flowerDiameter - 10, flowerDiameter - 10);
     ellipse(flowerX1 - 30, flowerY1 + 30, flowerDiameter - 10, flowerDiameter - 10);
     ellipse(flowerX1 + 30, flowerY1 + 30, flowerDiameter - 10, flowerDiameter - 10);
 
-    // Draw middle of Flower1
+    // Draw middle of Flower
     fill(20, 23, 20);
     ellipse(flowerX1, flowerY1, flowerDiameter - 30, flowerDiameter - 30);
 
@@ -93,6 +119,30 @@ public class Sketch extends PApplet {
 
       // draw mouth
       rect((float)(cubeX + 15), (float)(cubeY + 65), (float)(cubeWidth * 0.7), (float)(cubeHeight * 0.2));
+
     }
-}  
+    
+    /*
+     * Draws repeating pink circles at the top of the screen
+     * 
+     * @param x   X coordinate of the original circle
+     * @param y   Y coordinate of the circle
+     * @param dia   Diameter of the circles
+     * @newX      Updated X coordinate of the circle after it is returned
+     */
+
+    public float drawCircle(float x, float y, float dia){
+    
+      // draws the original circle
+      fill(252, 3, 182);
+      ellipse(x, y, dia, dia);
+      
+      // increases the X value by the diameter.  This will create a chain of circles.  Returns the new value as variable newX
+      float newX = x + dia;
+
+      return newX;
+    }
+}   
+
+
 
